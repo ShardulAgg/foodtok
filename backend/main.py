@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import analyze
+from app.routers import analyze, list, ideate
 
 app = FastAPI(
     title="ViraSearch API",
@@ -19,6 +19,8 @@ app.add_middleware(
 
 # Include routers
 app.include_router(analyze.router)
+app.include_router(list.router)
+app.include_router(ideate.router)
 
 @app.get("/")
 async def root():
