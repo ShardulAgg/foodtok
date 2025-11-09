@@ -1,12 +1,18 @@
 from pydantic import BaseModel
-from typing import Optional, Dict, Any
+from typing import List
+
+
+class TrendItem(BaseModel):
+    trend_name: str
+    video_reference: str
+    why_trending: str
+    category: str
 
 
 class ListRequest(BaseModel):
-    query: Optional[str] = None
-    filters: Optional[Dict[str, Any]] = None
+    pass
 
 
 class ListResponse(BaseModel):
     status: str
-    items: list[Dict[str, Any]]
+    trends: List[TrendItem]

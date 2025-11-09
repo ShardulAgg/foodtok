@@ -10,7 +10,8 @@
       "Bash(git reflog:*)",
       "Bash(git gc:*)",
       "WebSearch",
-      "WebFetch(domain:googleapis.github.io)"
+      "WebFetch(domain:googleapis.github.io)",
+      "Bash(python -m uvicorn:*)"
     ],
     "deny": [],
     "ask": []
