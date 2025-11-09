@@ -1,12 +1,11 @@
 from pydantic import BaseModel
-from typing import Optional, Dict, Any
+from typing import Optional
 
 
 class AnalyzeRequest(BaseModel):
-    content: str
-    options: Optional[Dict[str, Any]] = None
+    video_path: str
 
 
 class AnalyzeResponse(BaseModel):
     status: str
-    result: Dict[str, Any]
+    message: str
